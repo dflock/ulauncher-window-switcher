@@ -2,7 +2,7 @@
 
 This is a plugin for [uLauncher](https://ulauncher.io/) that lets you search & switch between Linux/X11 Windows by name:
 
-![](./screenshots/search.png)
+![](./screenshots/window-switcher-screenshot.png)
 
 The default keyword in `w`, so just run Ulauncher, then type `w <query>` to filter the window list, then select a window from the list to switch to that window.
 
