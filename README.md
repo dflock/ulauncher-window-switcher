@@ -4,7 +4,7 @@ This is a plugin for [uLauncher](https://ulauncher.io/) that lets you search & s
 
 ![](./screenshots/window-switcher-screenshot.png)
 
-The default keyword in `w`, so just run Ulauncher, then type `w <query>` to filter the window list, then select a window from the list to switch to that window.
+The default keyword in `win`, so just run Ulauncher, then type `win <query>` to filter the window list, then select a window from the list to switch to that window.
 
 I used window icons from the [Obsidian Icon pack](https://github.com/madmaxms/iconpack-obsidian)
 

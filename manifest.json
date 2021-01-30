@@ -12,7 +12,7 @@
       "id": "window_switcher_kw",
       "type": "keyword",
       "name": "Window Switcher",
-      "default_value": "w"
+      "default_value": "win"
     }
   ]
 }
