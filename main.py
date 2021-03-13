@@ -41,7 +41,7 @@ class KeywordQueryEventListener(EventListener):
                                                 # Workaround for https://github.com/Ulauncher/Ulauncher/issues/587
                                                 name=window['name'].replace('&', '&amp;') if search else window['name'],
                                                 description=f'Workspace: {window["ws"]}: {ws_dict[window["ws"]]}, Window Id: {w_idx}',
-                                                on_enter=RunScriptAction(f'wmctrl -ai {w_idx}')))
+                                                on_enter=RunScriptAction(f'wmctrl -ia {w_idx}')))
 
         return RenderResultListAction(items)
 
