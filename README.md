@@ -1,6 +1,6 @@
-# Window Switcher plugin for Ulauncher
+# Linux/X11 Window Switcher plugin for Ulauncher
 
-This is a plugin for [uLauncher](https://ulauncher.io/) that lets you search & switch between Linux/X11 Windows by name:
+This is a plugin for [Ulauncher](https://ulauncher.io/) that lets you search & switch between Linux/X11 Windows by name:
 
 ![](./screenshots/window-switcher-screenshot.png)
 
