@@ -24,8 +24,7 @@ class X11WindowSwitcherExtension(Extension):
             import logging
 
             logger = logging.getLogger(__name__)
-            e = "Missing Dependency: wmctrl not found on $PATH"
-            logger.error(e)
+            logger.error("Missing Dependency: wmctrl not found on $PATH")
             import sys
 
             sys.exit()
@@ -77,8 +76,10 @@ class KeywordQueryEventListener(EventListener):
                         name=window["name"].replace("&", "&amp;")
                         if search
                         else window["name"],
-                        description=f'Workspace {window["ws"]}: {ws_dict[window["ws"]]}, Window Id: {w_idx}',
-                        on_enter=RunScriptAction(f"wmctrl -ia {w_idx}"),
+                        description="Workspace {}: {}, Window Id: {}".format(
+                            window["ws"], ws_dict[window["ws"]], w_idx
+                        ),
+                        on_enter=RunScriptAction("wmctrl -ia {}".format(w_idx)),
                     )
                 )
 
