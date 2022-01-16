@@ -41,9 +41,10 @@ class KeywordQueryEventListener(EventListener):
         # {<window_id>: {ws: <workspace_id>, name: <window_name>}}
         result = subprocess.run(
             ['wmctrl -l | awk \'{ if( $2 != "-1") { $3="";  print $0} }\''],
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE, # equivalent to capture_output=True
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,  # equivalent to capture_output=True
             shell=True,
-            universal_newlines=True, # equivalent to text=True
+            universal_newlines=True,  # equivalent to text=True
         ).stdout
         w_list = [y for y in (x.strip() for x in result.splitlines()) if y]
         w_dict = {
@@ -60,9 +61,10 @@ class KeywordQueryEventListener(EventListener):
             [
                 "wmctrl -d | sed -n -E -e 's/^.*WA: (N\/A|.,. [[:digit:]]+x[[:digit:]]+)  //p'"
             ],
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE, # equivalent to capture_output=True
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,  # equivalent to capture_output=True
             shell=True,
-            universal_newlines=True, # equivalent to text=True
+            universal_newlines=True,  # equivalent to text=True
         ).stdout
         ws_list = [y for y in (x.strip() for x in result.splitlines()) if y]
         ws_dict = {i: x for i, x in enumerate(ws_list)}
