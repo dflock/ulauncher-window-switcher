@@ -46,7 +46,7 @@ class KeywordQueryEventListener(EventListener):
             shell=True,
             universal_newlines=True,  # equivalent to text=True
         ).stdout
-        w_list = [y for y in (x.strip() for x in result.splitlines()) if y]
+        w_list = [y for y in (x.strip() for x in result.split("\n")) if y]
         w_dict = {
             x[1].split(maxsplit=2)[0]: {
                 "ws": int(x[1].split(maxsplit=2)[1]),
