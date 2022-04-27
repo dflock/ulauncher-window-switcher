@@ -59,7 +59,7 @@ class KeywordQueryEventListener(EventListener):
         # {<workspace_id>: <workspace_name>}
         result = subprocess.run(
             [
-                "wmctrl -d | sed -n -E -e 's/^.*WA: (N\/A|.,. [[:digit:]]+x[[:digit:]]+)  //p'"
+                "wmctrl -d | sed -n -E -e 's/^.*WA: (N\/A|.+,.+ [[:digit:]]+x[[:digit:]]+)  //p'"
             ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,  # equivalent to capture_output=True
